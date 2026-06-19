@@ -149,7 +149,8 @@ void MenuManager::refreshDisplay() {
         case AppMode::CLOCK: {
             String time = Helpers::formatHMS(_rtc.getHour(), _rtc.getMinute(), _rtc.getSecond());
             String temp = String((int)_sensors.getTemperature()) + "C";
-            String date = Helpers::formatDM(_rtc.getDay(), _rtc.getMonth());
+            // Show day/month/year on the clock screen (DD/MM/YYYY)
+            String date = Helpers::formatDM(_rtc.getDay(), _rtc.getMonth()) + "/" + String(_rtc.getYear());
             String hum = String((int)_sensors.getHumidity()) + "%";
             _display.showClock(time, temp, date, hum, _alarm.isEnabled());
             break;
