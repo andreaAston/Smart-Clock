@@ -20,8 +20,7 @@ A modular embedded project for Arduino Uno with a DS1302 RTC, DHT11 sensor,
 
 ## 2. Setting up VS Code + PlatformIO
 
-1. **Install VS Code**
-   Download and install from https://code.visualstudio.com/
+1. Asumming you got VS code 
 
 2. **Install the PlatformIO IDE extension**
    - Open VS Code
